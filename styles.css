@@ -15,6 +15,16 @@ body {
     color: var(--color-dark);
 }
 
+div {
+    padding: 0 !important;
+    border: 2px solid red;
+}
+
+.container {
+    padding: 1rem !important;
+    max-width: 1920px;
+}
+
 .navigation {
     border: 2px solid red;
     align-items: center;
@@ -29,32 +39,60 @@ body {
 .nav-list {
     width: 100%;
     text-align: end;
-    padding-right: 15px;
-}
-
-div.navigation>div {
-    padding: 0;
-    border: 2px solid red;
-}
-
-div.nav-list>button {
-    background: var(--color-dark);
-    border: none;
-    color: var(--color-light)
-}
-
-button {
-    border-radius: 29px;
-    padding: 15px 25px;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 23px;
-
 }
 
 button,
 .header {
     font-family: var(--heading-font);
+}
+
+button {
+    border-radius: 29px;
+    padding: 15px 20px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.btn-contact {
+    background: var(--color-dark);
+    border: none;
+    color: var(--color-light)
+}
+
+.main-section {
+    height: 672px;
+}
+
+/* I need to make this for all columns */
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.setups img {
+    max-width: 80%;
+}
+
+.setups .section-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.setups .main-section-btn-container {
+    text-align: left;
+}
+
+.setups .img-container {
+    text-align: end;
 }
 
 /* .col-6 {
@@ -66,9 +104,4 @@ h1 {
     font-family: var(--heading-font);
     background-color: var(--background-window);
 
-}
-
-h2 {
-    font-family: var(--main-font);
-    background-color: var(--background-element);
 }
