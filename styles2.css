@@ -6,6 +6,10 @@
     --color-dark: #1A1D1C;
 }
 
+html {
+    font-size: 10px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -19,37 +23,37 @@ body {
     background-color: var(--color-background);
     color: var(--color-dark);
     font-family: var(--main-font);
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 400;
 
 }
 
 .page-container {
     width: 100%;
-    max-width: 1920px;
+    max-width: 192rem;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 6rem;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 2.5rem 0;
 }
 
 .logo-image {
     width: 100%;
-    max-width: 273px;
+    max-width: 27.3rem;
     height: auto;
 }
 
 button {
-    border-radius: 29px;
-    padding: 17.8px 27px;
+    border-radius: 2.9rem;
+    padding: 1.8rem 2.7rem;
     font-family: var(--heading-font);
-    font-size: 28px;
+    font-size: 2.8rem;
     font-weight: 500;
-    line-height: 22.5px;
+    line-height: 2.25rem;
 }
 
 .btn-contact {
@@ -60,7 +64,7 @@ button {
 
 .btn-info {
     background-color: transparent;
-    border: 2px solid var(--color-dark);
+    border: 0.2rem solid var(--color-dark);
 }
 
 .projects .btn-info {
@@ -76,16 +80,15 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
-    gap: 20px;
-
+    gap: 2rem;
 }
 
 .info-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 35px;
-    padding: 30px;
+    border-radius: 3.5rem;
+    padding: 3rem;
 }
 
 .info-block-white {
@@ -98,14 +101,26 @@ button {
 
 .header {
     font-family: var(--heading-font);
-    font-size: 58px;
+    font-size: 5.8rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     line-height: 83%;
 }
 
+.projects {
+    background-image: url(./images/Rectangle\ 1.png);
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.projects .lightning {
+    height: 9.56rem;
+}
+
 .setups .header,
-.highlights .header {
+.highlights .header,
+.projects .header {
     color: var(--color-light);
 }
 
@@ -122,11 +137,15 @@ button {
     align-items: end;
 }
 
+.setups .info-block-btn-container img {
+    max-height: 25.8rem;
+}
+
 .setups-catalog-block {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 1fr;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .highlights {
@@ -136,4 +155,26 @@ button {
 
 .work {
     grid-column: span 2;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 5.3px;
+    }
+}
+
+@media (max-width: 760px) {
+    html {
+        font-size: 5px;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 2rem;
+    }
+    .info-block {
+        grid-column: span 2
+    }
 }
