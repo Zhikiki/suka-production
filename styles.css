@@ -6,55 +6,54 @@
     --color-dark: #1A1D1C;
 }
 
+html {
+    font-size: 10px;
+}
+
 * {
     box-sizing: border-box;
 }
+
+/* div {
+
+    border: 2px solid red;
+} */
 
 body {
     background-color: var(--color-background);
     color: var(--color-dark);
     font-family: var(--main-font);
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 400;
 
 }
 
-div {
-    padding: 0 !important;
-    border: 2px solid red;
-}
-
-.container {
-    padding: 1rem !important;
-    max-width: 1920px;
+.page-container {
+    width: 100%;
+    max-width: 192rem;
+    margin: 0 auto;
+    padding: 0 6rem;
 }
 
 .navigation {
-    border: 2px solid red;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
 }
 
 .logo-image {
     width: 100%;
-    max-width: 273px;
+    max-width: 27.3rem;
     height: auto;
 }
 
-.nav-list {
-    width: 100%;
-    text-align: end;
-}
-
-button,
-.header {
-    font-family: var(--heading-font);
-}
-
 button {
-    border-radius: 29px;
-    padding: 10px 20px;
-    font-size: 28px;
+    border-radius: 2.9rem;
+    padding: 1.8rem 2.7rem;
+    font-family: var(--heading-font);
+    font-size: 2.8rem;
     font-weight: 500;
+    line-height: 2.25rem;
 }
 
 .btn-contact {
@@ -63,65 +62,153 @@ button {
     color: var(--color-light)
 }
 
-.main-section {
-    /* height: 672px; */
-    /* display: flex; */
-
+.btn-info {
+    background-color: transparent;
+    border: 0.2rem solid var(--color-dark);
 }
 
-/* I need to make this for all columns */
+.projects .btn-info {
+    border: none;
+}
+
+.setups .btn-info {
+    border-color: var(--color-light);
+}
+
+/* For rows 223px = 1fr */
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 2rem;
+}
+
 .info-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 3.5rem;
+    padding: 3rem;
 }
 
-.info-block-body-container {
-    background-color: red;
-    margin-bottom: 3rem;
+.info-block-white {
+    background-color: var(--color-light)
+}
+
+.info-block-black {
+    background-color: var(--color-dark)
 }
 
 .header {
-    font-size: 58px;
+    font-family: var(--heading-font);
+    font-size: 5.8rem;
     font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 83%;
 }
 
-.setups img {
-    max-width: 100%;
+.projects {
+    background-image: url(./images/Rectangle\ 1.png);
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.setups .section-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.projects .lightning {
+    height: 9.56rem;
 }
 
-.setups .info-block-btn-container {
-    text-align: left;
+.setups .header,
+.highlights .header,
+.projects .header {
+    color: var(--color-light);
 }
 
-.setups .img-container {
+.description .info-block-btn-container,
+.projects .info-block-btn-container,
+.catalog .info-block-btn-container {
     text-align: end;
-    max-width: 258px;
-    height: auto;
 }
 
-.catalog .info-block-body-container {
-    background-color: blue;
-    margin-bottom: 8rem;
-}
-
-/* .col-6 {
-    border: 2px solid red;
-} */
-
-
-/* .main-section-2 {
+.setups .info-block-btn-container,
+.work .info-block-btn-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem
+    align-items: end;
 }
-.info-block {
-    flex-basis: 30%
-} */
+
+.setups-catalog-block.info-block {
+    padding: 0;
+}
+
+.setups .info-block-btn-container img {
+    max-height: 25.8rem;
+}
+
+.setups-catalog-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.highlights {
+    background-image: url(./images/Rectangle\ 5.png);
+    background-size: cover;
+}
+
+.work {
+    grid-column: span 2;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 5.3px;
+    }
+}
+
+@media (max-width: 760px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main-section {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1.35fr 1.35fr 1.5fr 0.5fr 1fr;
+        gap: 2rem;
+    }
+
+    .info-block {
+        grid-column: span 2
+    }
+
+    .work.info-block {
+        height: fit-content;
+    }
+
+    .work .info-block-btn-container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .work .info-block-btn-container ul {
+        margin-bottom: 8rem;
+    }
+
+    .work-explore-button-container {
+        align-self: end;
+    }
+}
+
+@media (max-width: 440px) {
+    html {
+        font-size: 6.4px;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+        font-size: 5px;
+    }
+}
