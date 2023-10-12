@@ -1,0 +1,139 @@
+:root {
+    --heading-font: 'Outfit', sans-serif;
+    --main-font: 'Inter', sans-serif;
+    --color-background: #DDDDDD;
+    --color-light: #FEFEFE;
+    --color-dark: #1A1D1C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* div {
+
+    border: 2px solid red;
+} */
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: var(--main-font);
+    font-size: 22px;
+    font-weight: 400;
+
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.logo-image {
+    width: 100%;
+    max-width: 273px;
+    height: auto;
+}
+
+button {
+    border-radius: 29px;
+    padding: 17.8px 27px;
+    font-family: var(--heading-font);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 22.5px;
+}
+
+.btn-contact {
+    background: var(--color-dark);
+    border: none;
+    color: var(--color-light)
+}
+
+.btn-info {
+    background-color: transparent;
+    border: 2px solid var(--color-dark);
+}
+
+.projects .btn-info {
+    border: none;
+}
+
+.setups .btn-info {
+    border-color: var(--color-light);
+}
+
+/* For rows 223px = 1fr */
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 20px;
+
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 35px;
+    padding: 30px;
+}
+
+.info-block-white {
+    background-color: var(--color-light)
+}
+
+.info-block-black {
+    background-color: var(--color-dark)
+}
+
+.header {
+    font-family: var(--heading-font);
+    font-size: 58px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 83%;
+}
+
+.setups .header,
+.highlights .header {
+    color: var(--color-light);
+}
+
+.description .info-block-btn-container,
+.projects .info-block-btn-container,
+.catalog .info-block-btn-container {
+    text-align: end;
+}
+
+.setups .info-block-btn-container,
+.work .info-block-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.setups-catalog-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.highlights {
+    background-image: url(./images/Rectangle\ 5.png);
+    background-size: cover;
+}
+
+.work {
+    grid-column: span 2;
+}

@@ -13,6 +13,10 @@
 body {
     background-color: var(--color-background);
     color: var(--color-dark);
+    font-family: var(--main-font);
+    font-size: 22px;
+    font-weight: 400;
+
 }
 
 div {
@@ -48,10 +52,9 @@ button,
 
 button {
     border-radius: 29px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 28px;
     font-weight: 500;
-    line-height: 23px;
 }
 
 .btn-contact {
@@ -61,24 +64,30 @@ button {
 }
 
 .main-section {
-    height: 672px;
+    /* height: 672px; */
+    /* display: flex; */
+
 }
 
 /* I need to make this for all columns */
-.description {
+.info-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.info-block-body-container {
+    background-color: red;
+    margin-bottom: 3rem;
+}
+
 .header {
     font-size: 58px;
     font-weight: 600;
-    line-height: 48px;
 }
 
 .setups img {
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .setups .section-body {
@@ -87,21 +96,32 @@ button {
     align-items: flex-end;
 }
 
-.setups .main-section-btn-container {
+.setups .info-block-btn-container {
     text-align: left;
 }
 
 .setups .img-container {
     text-align: end;
+    max-width: 258px;
+    height: auto;
+}
+
+.catalog .info-block-body-container {
+    background-color: blue;
+    margin-bottom: 8rem;
 }
 
 /* .col-6 {
     border: 2px solid red;
 } */
 
-h1 {
-    color: red;
-    font-family: var(--heading-font);
-    background-color: var(--background-window);
 
+/* .main-section-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem
 }
+.info-block {
+    flex-basis: 30%
+} */
