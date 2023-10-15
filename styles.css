@@ -202,6 +202,49 @@ a.highlights {
     grid-column: span 2;
 }
 
+.d-none {
+    display: none;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 3rem 2rem;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: scroll;
+    display: grid !important;
+    text-align: center;
+}
+
+.highlights-modal {
+    background-color: red;
+    margin: 7rem auto 0rem;
+    display: inline-block;
+    width: 100%;
+    max-width: 180rem;
+    height: auto;
+    border-radius: 15px;
+    color: var(--color-light);
+    position: relative;
+}
+
+.projects-modal {
+    background-color: green;
+    margin: 7rem auto 0rem;
+    display: inline-block;
+    width: 100%;
+    max-width: 180rem;
+    height: auto;
+    border-radius: 15px;
+    color: var(--color-light);
+    position: relative;
+}
+
+
 @media (max-width: 1440px) {
     html {
         font-size: 5.3px;
