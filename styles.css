@@ -90,9 +90,9 @@ a.highlights {
     text-decoration: none;
 }
 
-.projects .btn-info {
+/* .projects .btn-info {
     border: none;
-}
+} */
 
 .setups .btn-info {
     border-color: var(--color-light);
@@ -161,7 +161,8 @@ a.highlights:visited {
 }
 
 .projects .lightning {
-    height: 9.56rem;
+    height: 11.3rem;
+    padding: 1.8rem 2.7rem;
 }
 
 .setups .header,
