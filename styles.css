@@ -213,35 +213,100 @@ a.highlights {
     padding: 3rem 2rem;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(26, 29, 28, 0.2);
     z-index: 999;
     overflow: scroll;
     display: grid !important;
     text-align: center;
 }
 
+.projects-modal,
 .highlights-modal {
-    background-color: red;
+    background: rgba(26, 29, 28, 0.5);
     margin: 7rem auto 0rem;
     display: inline-block;
     width: 100%;
     max-width: 180rem;
-    height: auto;
+    height: fit-content;
     border-radius: 15px;
     color: var(--color-light);
     position: relative;
 }
 
+/* .highlights-modal {
+    background-color: red;
+}
+
 .projects-modal {
     background-color: green;
-    margin: 7rem auto 0rem;
-    display: inline-block;
-    width: 100%;
-    max-width: 180rem;
-    height: auto;
-    border-radius: 15px;
-    color: var(--color-light);
+} */
+
+
+.carousel-item {
+    height: 100rem;
+    background: #666;
+    color: white;
     position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 2.4rem;
+}
+
+/* .container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5rem;
+} */
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    border: 2px solid white !important;
+    background: none !important;
+    opacity: 1 !important;
+    margin-bottom: 4rem;
+}
+
+.carousel-indicators .active {
+    background-color: white !important
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 10%;
+}
+
+.btn-close {
+    position: absolute !important;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.highlight-1 {
+    background-image: url(./images/Highlight-1.png)
+}
+
+.highlight-2 {
+    background-image: url(./images/Highlight-2.png)
 }
 
 

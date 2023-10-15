@@ -116,16 +116,47 @@
         </div>
         <div id="projects-modal-container" class="d-none">
             <div class="projects-modal">
-        
+
             </div>
         </div>
-        <div id="highlights-modal-container" class="d-none">
-            <div class="highlights-modal">
 
+        <!-- Heighlights Modal -->
+        <div id="highlights-modal-container" class="modal-container">
+            <div class="highlights-modal">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                            aria-label="Slide 1" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                            class=""></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item highlight-1 active">
+                        </div>
+                        <div class="carousel-item highlight-2">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
