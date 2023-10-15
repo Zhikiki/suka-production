@@ -13,9 +13,7 @@ function showModal(targetModal) {
 
   let modalContainer = document.getElementById(`${modalTitle}-modal-container`);
   modalContainer.classList.add('modal-container');
-  console.log(modalTitle);
   console.log(modalContainer);
-  console.log(modalContainer.classList);
 
   // Call close modal function when user tap on modal container
   modalContainer.addEventListener('click', (event) => {
@@ -41,6 +39,7 @@ showModalButton.forEach((element) => {
 // Function closes modal
 function closeModal() {
   let modalContainer = document.querySelector('.modal-container');
+  console.log(modalContainer);
   modalContainer.classList.remove('modal-container');
 }
 
