@@ -65,13 +65,24 @@ button {
 
 .btn-contact {
     background: var(--color-dark);
-    border: none;
+    border: 0.2rem solid var(--color-dark);
     color: var(--color-light)
+}
+
+.btn-contact:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: 0.2rem solid var(--color-dark);
 }
 
 .btn-info {
     background-color: transparent;
     border: 0.2rem solid var(--color-dark);
+}
+
+.btn-info:hover {
+    background: var(--color-dark);
+    color: var(--color-light)
 }
 
 a.projects,
@@ -87,7 +98,6 @@ a.highlights {
     border-color: var(--color-light);
 }
 
-/* For rows 223px = 1fr */
 .main-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -101,6 +111,7 @@ a.highlights {
     justify-content: space-between;
     border-radius: 3.5rem;
     padding: 3rem;
+    transition: transform .2s;
 }
 
 .description:hover,
@@ -109,7 +120,7 @@ a.highlights {
 .catalog:hover,
 .highlights:hover,
 .work:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     z-index: 998;
 }
 
