@@ -51,3 +51,7 @@ window.addEventListener('keydown', (event) => {
     closeModal();
   }
 });
+// Call close modal function when user press 'Close' button in modal
+document.querySelector('.close-modal-btn').addEventListener('click', () => {
+  closeModal();
+});
