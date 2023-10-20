@@ -257,8 +257,9 @@ a.highlights:visited {
     color: white;
     position: relative;
     background-position: center;
-    background-size: contain;
+    /* background-size: contain; */
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* .container {
@@ -340,12 +341,10 @@ a.highlights:visited {
 
 .highlight-1 {
     background-image: url(./images/Highlight-1.png);
-    /* background-size: 100% 100%; */
 }
 
 .highlight-2 {
     background-image: url(./images/Highlight-2.png);
-    /* background-size: 100% 100%; */
 }
 
 
@@ -386,6 +385,14 @@ a.highlights:visited {
 
     .work-explore-button-container {
         align-self: end;
+    }
+
+    .carousel-item {
+        background-size: auto 70%;
+    }
+
+    .close-modal-btn {
+        left: 3rem
     }
 }
 
