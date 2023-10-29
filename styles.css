@@ -265,14 +265,7 @@ a.highlights:visited {
     background-size: cover;
 }
 
-/* .container {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5rem;
-} */
+
 .close-modal-btn {
     position: absolute !important;
     width: 10%;
@@ -287,12 +280,13 @@ a.highlights:visited {
     background-color: transparent;
     border: 0.2rem solid var(--color-light);
     border-radius: 3.5rem;
+    color: var(--color-light);
+    padding: 0.3rem 2rem;
 }
 
-.close-modal-btn img {
-    width: 2.8rem;
-    height: auto;
-
+.close-modal-btn span {
+    font-size: 5rem;
+    font-weight: 300;
 }
 
 .carousel-indicators button {
