@@ -251,12 +251,12 @@ a.highlights:visited {
 } */
 
 .carousel-inner {
-    border-radius: 2.4rem;
+    border-radius: 1.6rem;
 }
 
 .carousel-item {
     height: 100rem;
-    background: rgba(26, 29, 28);
+    background: var(--color-light);
     color: white;
     position: relative;
     background-position: center;
@@ -286,7 +286,7 @@ a.highlights:visited {
 
 .close-modal-btn span {
     font-size: 5rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .carousel-indicators button {
@@ -415,6 +415,15 @@ footer a:active {
 
     .close-modal-btn {
         left: 3rem
+    }
+
+    .close-modal-btn button {
+        border: 0.2rem solid var(--color-dark);
+        color: var(--color-dark);
+    }
+
+    .close-modal-btn span {
+        font-size: 3.5rem;
     }
 }
 
