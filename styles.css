@@ -293,14 +293,14 @@ a.highlights:visited {
     width: 1rem !important;
     height: 1rem !important;
     border-radius: 50%;
-    border: 0.2rem solid white !important;
+    border: 0.2rem solid var(--color-light) !important;
     background: none !important;
     opacity: 1 !important;
     margin-bottom: 4rem;
 }
 
 .carousel-indicators .active {
-    background-color: white !important
+    background-color: var(--color-light) !important
 }
 
 .carousel-control-next,
@@ -411,6 +411,18 @@ footer a:active {
 
     .carousel-item {
         background-size: auto 70%;
+    }
+
+        .carousel-indicators {
+            bottom: 6%;
+        }
+
+    .carousel-indicators button {
+        border: 0.2rem solid var(--color-dark) !important;
+    }
+
+    .carousel-indicators .active {
+        background-color: var(--color-dark) !important
     }
 
     .close-modal-btn {
