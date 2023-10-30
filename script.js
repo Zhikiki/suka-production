@@ -7,22 +7,19 @@ function showModal(targetModal) {
   let closeModalButton = document.querySelectorAll('.close-modal-btn');
   closeModalButton.forEach((item) => {
     item.addEventListener('click', () => {
-      let message = 'close button is being clicked';
-      closeModal(message, modalContainer);
+      closeModal(modalContainer);
     });
   });
 
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      let message = 'Esc key is being clicked';
-      closeModal(message, modalContainer);
+      closeModal(modalContainer);
     }
   });
 
   modalContainer.addEventListener('click', (event) => {
     if (event.target == modalContainer) {
-      let message = 'Modal container is being clicked';
-      closeModal(message, modalContainer);
+      closeModal(modalContainer);
     }
   });
 }
@@ -37,7 +34,6 @@ showModalButtons.forEach((item) => {
   });
 });
 
-function closeModal(message, modalContainer) {
-  console.log(message);
+function closeModal(modalContainer) {
   modalContainer.classList.remove('modal-container');
 }
