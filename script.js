@@ -4,21 +4,25 @@ function showModal(targetModal) {
   );
   modalContainer.classList.add('modal-container');
 
-  let closeModalButton = document.querySelector('.close-modal-btn');
-  closeModalButton.addEventListener('click', () => {
-    let message = 'close button is being clicked';
-    closeModal(modalContainer);
+  let closeModalButton = document.querySelectorAll('.close-modal-btn');
+  closeModalButton.forEach((item) => {
+    item.addEventListener('click', () => {
+      let message = 'close button is being clicked';
+      closeModal(message, modalContainer);
+    });
   });
 
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      closeModal(modalContainer);
+      let message = 'Esc key is being clicked';
+      closeModal(message, modalContainer);
     }
   });
 
   modalContainer.addEventListener('click', (event) => {
     if (event.target == modalContainer) {
-      closeModal(modalContainer);
+      let message = 'Modal container is being clicked';
+      closeModal(message, modalContainer);
     }
   });
 }
@@ -33,6 +37,7 @@ showModalButtons.forEach((item) => {
   });
 });
 
-function closeModal(modalContainer) {
+function closeModal(message, modalContainer) {
+  console.log(message);
   modalContainer.classList.remove('modal-container');
 }
