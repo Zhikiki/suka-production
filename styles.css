@@ -311,13 +311,9 @@ a.highlights:visited {
     width: 100%;
     height: 100%;
     display: flex;
-    align-content: center;
-
     position: absolute;
     left: 0;
-    /* right: 0; */
     top: 0;
-    /* bottom: 0; */
     z-index: 1;
 }
 
@@ -334,6 +330,7 @@ a.highlights:visited {
     left: 12%;
     bottom: 10%;
     z-index: 999;
+    height: fit-content;
 }
 
 .project-description-container h1 {
@@ -343,6 +340,7 @@ a.highlights:visited {
     font-size: 5.8rem;
     margin-bottom: 2rem;
     line-height: 83%;
+    padding-right: 3rem;
 }
 
 .project-description-container p {
@@ -352,6 +350,8 @@ a.highlights:visited {
     font-weight: 400;
     line-height: 150%;
     max-width: 50%;
+    margin: 0;
+    padding-right: 3rem;
 }
 
 .highlight-1 {
@@ -401,13 +401,14 @@ footer a:active {
 
     .main-section {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows: 1.35fr 1.35fr 1.5fr 0.5fr 1fr;
         gap: 2rem;
     }
 
     .info-block {
-        grid-column: span 2
+        grid-column: span 1;
+
     }
 
     .work.info-block {
@@ -427,11 +428,11 @@ footer a:active {
         align-self: end;
     }
 
-    .carousel-item {
+    #highlights-modal-container .carousel-item {
         background-size: auto 70%;
     }
 
-    .carousel-indicators {
+    #highlights-modal-container .carousel-indicators {
         bottom: 6%;
     }
 
@@ -456,19 +457,69 @@ footer a:active {
         font-size: 3.5rem;
     }
 
-    #background-video-container {
-        height: 100%;
-        width: auto;
+    #projects-modal .carousel-item {
+        height: 70vh
     }
 
-    #background-video {
-        object-fit: contain
+    #projects-modal-container .carousel-control-prev,
+    #projects-modal-container .carousel-control-next {
+        top: 14rem;
+    }
+
+    #projects-modal-container .carousel-indicators {
+        bottom: 10rem
+    }
+
+    .project-content-container {
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 15rem;
+    }
+
+    .project-description-container {
+        padding: 0 4rem;
+        color: var(--color-dark);
+        position: initial;
+    }
+
+    span.defis {
+        display: none;
+    }
+
+    span.project-subtitle {
+        font-family: var(--main-font);
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 150%;
+        line-height: 0;
+    }
+
+    .project-description-container p {
+        max-width: 100%;
+    }
+
+    #background-video-container {
+        position: initial;
+        height: 70%;
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 520px) {
     html {
         font-size: 6.4px;
+    }
+
+    #background-video-container {
+        position: initial;
+        height: 60%;
+    }
+
+    #projects-modal-container .carousel-control-prev,
+    #projects-modal-container .carousel-control-next {
+        top: 22rem;
     }
 }
 
