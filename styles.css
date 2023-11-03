@@ -530,10 +530,12 @@ a.highlights:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 4rem;
 }
 
 #form-modal-container form {
-    width: 30%;
+    width: 90%;
+    max-width: 52.3rem;
     text-align: left;
     align-self: center;
     display: flex;
