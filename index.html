@@ -24,8 +24,8 @@
             <div class="logo-container">
                 <img src="./images/Symbol=love.svg" class="logo-image" alt="Suka Rental logo - symbol of love">
             </div>
-            <div class="nav-items">
-                <button class="btn-contact">contact us</button>
+            <div title="form" class="nav-items show-modal-btn">
+                <button title="form" class="btn-black">contact us</button>
             </div>
         </div>
 
@@ -40,13 +40,13 @@
                         City, Tabanan Bali. Our technical park includes Italian acoustic equipment, all-weather lighting
                         equipment, projectors, lasers and control servers.</p>
                 </div>
-                <div class="info-block-btn-container">
-                    <button class="btn-contact">
+                <div title="form" class="info-block-btn-container show-modal-btn">
+                    <button title="form" class="btn-black">
                         contact us
                     </button>
                 </div>
             </div>
-            <a href="#" title="projects" class="projects info-block info-block-image">
+            <a href="#" title="projects" class="projects info-block info-block-image show-modal-btn">
                 <div class="info-block-body-container">
                     <div title="projects" class="header">
                         Projects
@@ -65,7 +65,7 @@
                     </div>
                     <div class="info-block-btn-container">
                         <div>
-                            <button class="btn-info">
+                            <button class="btn-white">
                                 <img src="./images/Vector 3.png" alt="Arrow">
                             </button>
                         </div>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="info-block-btn-container">
                         <a href="./images/suka rental equipment catalog.pdf" target="_blank">
-                            <button class="btn-info">
+                            <button class="btn-white">
                                 download
                             </button>
                         </a>
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <a href="#" title="highlights" class="highlights info-block info-block-image">
+            <a href="#" title="highlights" class="highlights info-block info-block-image show-modal-btn">
                 <div class="info-block-body-container">
                     <div title="highlights" class="header">Highlights</div>
                 </div>
@@ -109,11 +109,10 @@
                         <li>100+ ready-made projects in Bali</li>
                     </ul>
                     <div class="work-explore-button-container">
-                        <button class="btn-info">
+                        <button class="btn-white">
                             explore
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -549,8 +548,15 @@
         </div>
 
         <!-- Form Modal -->
-        <div id="form-modal-container" class="d-none modal-container">
+        <div id="form-modal-container" class="d-none">
             <div class="form-modal">
+                <div class="close-modal-btn">
+                    <button type="button" aria-label="Close">
+                        <span class="material-symbols-outlined">
+                            arrow_left_alt
+                        </span>
+                    </button>
+                </div>
                 <div class="header">Wanna work with us?</div>
                 <p>Leave your contacts here and we will contact you within 24 hours</p>
                 <form action="">
@@ -562,9 +568,8 @@
                         <label for="tel">Phone number:</label>
                         <input type="tel" id="tel" name="tel">
                     </div>
-                    
-                    
-                    <button type="submit">send</button>
+
+                    <button class="btn-black" type="submit">send</button>
                 </form>
             </div>
         </div>

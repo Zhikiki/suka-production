@@ -24,7 +24,7 @@ function showModal(targetModal) {
   });
 }
 
-let showModalButtons = document.querySelectorAll('a.info-block');
+let showModalButtons = document.querySelectorAll('.show-modal-btn');
 
 showModalButtons.forEach((item) => {
   item.addEventListener('click', (event) => {

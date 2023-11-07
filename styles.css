@@ -62,24 +62,24 @@ button {
     line-height: 2.25rem;
 }
 
-.btn-contact {
+.btn-black {
     background: var(--color-dark);
     border: 0.2rem solid var(--color-dark);
     color: var(--color-light)
 }
 
-.btn-contact:hover {
+.btn-black:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
     border: 0.2rem solid var(--color-dark);
 }
 
-.btn-info {
+.btn-white {
     background-color: transparent;
     border: 0.2rem solid var(--color-dark);
 }
 
-.btn-info:hover {
+.btn-white:hover {
     background: var(--color-dark);
     color: var(--color-light);
 }
@@ -89,11 +89,8 @@ a.highlights {
     text-decoration: none;
 }
 
-/* .projects .btn-info {
-    border: none;
-} */
 
-.setups .btn-info {
+.setups .btn-white {
     border-color: var(--color-light);
 }
 
@@ -533,6 +530,19 @@ a.highlights:visited {
     padding: 4rem;
 }
 
+#form-modal-container .close-modal-btn button {
+    background-color: transparent;
+    border: 0.2rem solid var(--color-dark);
+    border-radius: 3.5rem;
+    color: var(--color-dark);
+    padding: 0.3rem 2rem;
+}
+
+#form-modal-container .close-modal-btn button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
 #form-modal-container form {
     width: 90%;
     max-width: 52.3rem;
@@ -572,17 +582,8 @@ a.highlights:visited {
     outline: none;
 }
 
-#form-modal-container button {
+#form-modal-container button[type='submit'] {
     align-self: center;
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    border: 2px solid var(--color-dark);
-}
-
-#form-modal-container button:hover {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    border: 2px solid var(--color-dark);
 }
 
 footer {
