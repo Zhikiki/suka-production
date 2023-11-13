@@ -4,12 +4,16 @@ function showModal(targetModal) {
   );
   modalContainer.classList.add('modal-container');
 
-  let closeModalButton = document.querySelectorAll('.close-modal-btn');
+  let closeModalButton = document.querySelectorAll(
+    '.close-modal-btn, .back-to-main'
+  );
+  console.log(closeModalButton);
   closeModalButton.forEach((item) => {
     item.addEventListener('click', () => {
       closeModal(modalContainer);
     });
   });
+
 
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
@@ -23,6 +27,7 @@ function showModal(targetModal) {
     }
   });
 }
+
 
 let showModalButtons = document.querySelectorAll('.show-modal-btn');
 
@@ -100,6 +105,7 @@ document.getElementById('hidden_iframe').addEventListener('load', (event) => {
   if (submitted) {
     document.querySelector('#contact-form').reset();
     closeModal(document.querySelector('.modal-container'));
+    showModal('thank-you');
     console.log(document.querySelector('.modal-container'));
     // window.location.href = '/';
     console.log(event);

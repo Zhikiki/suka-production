@@ -224,7 +224,7 @@ a.highlights:visited {
 
 .projects-modal,
 .highlights-modal,
-.form-modal {
+.form-modal, .thank-you-modal {
     background: rgba(26, 29, 28, 0.2);
     margin: 8rem auto 0rem;
     display: inline-block;
@@ -520,7 +520,7 @@ a.highlights:visited {
     background-image: url(./images/highlights/highlights-43.jpg)
 }
 
-.form-modal {
+.form-modal, .thank-you-modal {
     background-color: var(--color-light);
     color: var(--color-dark);
     height: 100rem;
@@ -530,7 +530,8 @@ a.highlights:visited {
     padding: 4rem;
 }
 
-#form-modal-container .close-modal-btn button {
+#form-modal-container .close-modal-btn button,
+#thank-you-modal-container .close-modal-btn button {
     background-color: transparent;
     border: 0.2rem solid var(--color-dark);
     border-radius: 3.5rem;
@@ -584,6 +585,10 @@ a.highlights:visited {
 
 #form-modal-container button[type='submit'] {
     align-self: center;
+}
+
+.thank-you-modal-button {
+    margin-top: 11rem;
 }
 
 footer {
