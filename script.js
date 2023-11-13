@@ -30,6 +30,7 @@ showModalButtons.forEach((item) => {
   item.addEventListener('click', (event) => {
     event.preventDefault();
     let targetModal = event.target.getAttribute('title');
+    // console.log(targetModal);
     showModal(targetModal);
   });
 });
@@ -41,6 +42,19 @@ function closeModal(modalContainer) {
 // Contact form validation and submission
 
 var submitted = false;
+
+function validateName() {
+  var name = document.getElementById('name').value;
+  if (name.length == 0) {
+    alert("Name can't be blank");
+    return false;
+  }
+  if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+    alert('Please enter your correct name'); //Validation Message
+    return false;
+  }
+  return true;
+}
 
 function validatePhone() {
   var phone = document.getElementById('tel').value;
@@ -73,7 +87,7 @@ function validateEmail() {
 }
 
 function validateForm() {
-  if (!validatePhone() || !validateEmail()) {
+  if (!validateName || !validatePhone() || !validateEmail()) {
     alert('Form not submitted'); //Validation Message
     return false;
   } else {
@@ -82,9 +96,21 @@ function validateForm() {
   }
 }
 
-function showThankYouModal(params) {
-  alert('thank you modal will be shown');
-}
+document.getElementById('hidden_iframe').addEventListener('load', (event) => {
+  if (submitted) {
+    document.querySelector('#contact-form').reset();
+    closeModal(document.querySelector('.modal-container'));
+    console.log(document.querySelector('.modal-container'));
+    // window.location.href = '/';
+    console.log(event);
+  }
+});
+
+// function showThankYouModal() {
+//   // closeModal('form');
+//   alert('thank you modal will be shown');
+//   showModal('projects');
+// }
 
 // // let submitted = false;
 
