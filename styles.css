@@ -224,12 +224,14 @@ a.highlights:visited {
 
 .projects-modal,
 .highlights-modal,
-.form-modal, .thank-you-modal {
+.form-modal,
+.thank-you-modal,
+.how-we-work-modal {
     background: rgba(26, 29, 28, 0.2);
     margin: 8rem auto 0rem;
     display: inline-block;
     width: 100%;
-    max-width: 180rem;
+    max-width: 181rem;
     height: fit-content;
     border-radius: 1.5rem;
     color: var(--color-light);
@@ -520,7 +522,9 @@ a.highlights:visited {
     background-image: url(./images/highlights/highlights-43.jpg)
 }
 
-.form-modal, .thank-you-modal {
+.form-modal,
+.thank-you-modal,
+.how-we-work-modal {
     background-color: var(--color-light);
     color: var(--color-dark);
     height: 100rem;
@@ -531,7 +535,8 @@ a.highlights:visited {
 }
 
 #form-modal-container .close-modal-btn button,
-#thank-you-modal-container .close-modal-btn button {
+#thank-you-modal-container .close-modal-btn button,
+.how-we-work-modal .close-modal-btn button {
     background-color: transparent;
     border: 0.2rem solid var(--color-dark);
     border-radius: 3.5rem;
@@ -590,6 +595,36 @@ a.highlights:visited {
 .thank-you-modal-button {
     margin-top: 11rem;
 }
+
+.how-we-work-grid-container {
+    display: grid;
+    border: 2px solid red;
+    height: 100%;
+    margin-top: 10rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 2rem;
+}
+
+/* #how-we-work-modal-container {
+    background-color: transparent;
+} */
+
+/* .how-we-work-modal {
+    background-color: var(--color-background);
+    padding-top: 0;
+} */
+
+/* .how-we-work-modal .close-modal-btn {
+    top: 0;
+    left: -2rem;
+    color: var(--color-dark);
+} */
+
+/* .how-we-work-modal .close-modal-btn button {
+    color: var(--color-dark);
+    border-color: var(--color-dark)
+} */
 
 footer {
     padding: 2.5rem 0;

@@ -7,7 +7,6 @@ function showModal(targetModal) {
   let closeModalButton = document.querySelectorAll(
     '.close-modal-btn, .back-to-main'
   );
-  console.log(closeModalButton);
   closeModalButton.forEach((item) => {
     item.addEventListener('click', () => {
       closeModal(modalContainer);
@@ -35,7 +34,6 @@ showModalButtons.forEach((item) => {
   item.addEventListener('click', (event) => {
     event.preventDefault();
     let targetModal = event.target.getAttribute('title');
-    // console.log(targetModal);
     showModal(targetModal);
   });
 });
@@ -106,69 +104,5 @@ document.getElementById('hidden_iframe').addEventListener('load', (event) => {
     document.querySelector('#contact-form').reset();
     closeModal(document.querySelector('.modal-container'));
     showModal('thank-you');
-    console.log(document.querySelector('.modal-container'));
-    // window.location.href = '/';
-    console.log(event);
   }
 });
-
-// function showThankYouModal() {
-//   // closeModal('form');
-//   alert('thank you modal will be shown');
-//   showModal('projects');
-// }
-
-// // let submitted = false;
-
-// function validateEmail() {
-//   let emailInputValue = document.getElementById('email').value;
-
-//   if (emailInputValue.length == 0) {
-//     alert("Email can't be blank"); //Validation Message
-//     return false;
-//   }
-//   if (
-//     !emailInputValue.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
-//   ) {
-//     alert('Please enter a correct email address'); //Validation Message
-//     return false;
-//   }
-
-//   return true;
-// }
-
-// function validatePhone() {
-//   let phoneInputValue = document.getElementById('tel').value;
-//   if (phoneInputValue.length == 0) {
-//     alert("Phone number can't be blank"); //Validation Message
-//     return false;
-//   }
-
-//   if (
-//     !phoneInputValue.match(/^[+]?[\s./0-9]*[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/g)
-//   ) {
-//     alert('Please enter a correct phone number'); //Validation Message
-//     return false;
-//   }
-
-//   return true;
-// }
-
-// function validateContactForm(contactFormEvent) {
-//   if (!validateEmail() || !validatePhone()) {
-//     alert('Form not submitted need another message');
-//     return false;
-//   } else {
-//     alert('Form is submitted');
-//     document.querySelector('#contact-form').submit();
-//     // submitted = true;
-//     // window.location = 'http://developer.mozilla.org';
-//     return true;
-//   }
-// }
-
-// document.querySelector('#contact-form').addEventListener('submit', (event) => {
-//   // console.log(event);
-//   window.location = 'http://developer.mozilla.org';
-//   console.log(event);
-// });
