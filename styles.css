@@ -218,7 +218,7 @@ a.highlights:visited {
     height: 100vh;
     background: rgba(26, 29, 28, 0.2);
     z-index: 999;
-    overflow: scroll;
+    /* overflow: scroll; */
     display: grid !important;
     text-align: center;
 }
@@ -607,8 +607,8 @@ a.highlights:visited {
 
 .how-we-work-grid-container p {
     color: var(--color-gray-text);
-    font-size: 1.4rem;
-    max-width: 38rem;
+    font-size: 2.2rem;
+    /* max-width: 38rem; */
 }
 
 .info-block-dark {
@@ -651,10 +651,9 @@ a.highlights:visited {
     grid-column: 2 / 4;
 }
 
-.info-block.creative,
-.info-block.solution {
-    background-size: cover;
-    background-position: center;
+.info-block.creative {
+background-size: cover;
+background-position: center;
 }
 
 .info-block.creative {
@@ -669,7 +668,18 @@ a.highlights:visited {
 
 .info-block.solution {
     grid-column: 1 / 3;
-    background-image: url(images/work-solution-background.png);
+    /* background-image: url(images/work-solution-background.png); */
+}
+
+.info-block-img-container {
+    flex-basis: 25%;
+    object-fit: contain;
+}
+
+.solution .info-block-img-container img {
+    display: block;
+    margin: 0 auto;
+    max-height: 22rem;
 }
 
 .info-block.preproduction {
@@ -680,12 +690,14 @@ a.highlights:visited {
     grid-column: 5 / -1;
     background-color: var(--color-accent-background);
 }
+
 .info-block.event p {
     color: var(--color-dark);
 }
 
 #how-we-work-modal-container {
     background-color: transparent;
+    padding-inline: 5.5rem;
 }
 
 .how-we-work-modal {
