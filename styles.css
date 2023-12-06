@@ -693,15 +693,13 @@ a.highlights:visited {
     /* background-image: url(images/work-solution-background.png); */
 }
 
-.info-block-img-container {
-    max-height: 25%;
-    object-fit: contain;
-}
 
 .solution .info-block-img-container img {
     display: block;
     margin: 0 auto;
-    height: 100%;
+    /* height: 18rem; */
+    height: auto;
+    width: 70%;
 
 }
 
@@ -882,8 +880,42 @@ footer a:active {
         height: 70%;
     }
 
+
     .how-we-work-modal {
-        padding: 0 4rem 4rem 4rem;
+        height: 100%;
+    }
+
+    .info-block.first .close-modal-btn {
+        background-color: transparent;
+        padding: 1rem;
+    }
+
+    .how-we-work-grid-container p {
+        margin-bottom: 4rem;
+    }
+
+    .how-we-work-grid-container .creative p {
+        margin-bottom: 6rem;
+    }
+
+    .solution .info-block-img-container img {
+        width: 60%;
+    }
+
+    .solution .info-block-img-container {
+        margin-bottom: 2rem;
+    }
+
+    .how-we-work-grid-container {
+        display: flex;
+        flex-direction: column;
+        max-height: 90vh;
+        overflow-y: auto;
+        gap: 2rem;
+    }
+
+    .info-block.event {
+        margin-bottom: 2rem;
     }
 }
 
